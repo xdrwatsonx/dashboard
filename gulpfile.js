@@ -9,6 +9,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
     spritesmith = require('gulp.spritesmith'), // Подключение библиотеки для создания спрайтов
+    sass = require('gulp-sass'),
     merge = require('merge-stream');
 
 gulp.task('css', function(){ // Создаем таск Sass
@@ -17,6 +18,13 @@ gulp.task('css', function(){ // Создаем таск Sass
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
+
+gulp.task('sass', function () {
+    gulp.src('src/scss/**/*.scss')
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gulp.dest('app/css'))
+}) ;
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
@@ -57,11 +65,13 @@ gulp.task('css-libs', ['css'], function() {
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite'], function() {
-    gulp.watch('src/css/**/*.css', ['css']); // Наблюдение за css файлами в папке css
+gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], function() {
+    // gulp.watch('src/css/**/*.css', ['css']); // Наблюдение за css файлами в папке css
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/sprite/*.png', ['sprite']); // Наблюдение за папкой с картинками для спрайтов  папке sprite
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
+    gulp.watch('app/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('img', function() {

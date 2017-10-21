@@ -92,7 +92,7 @@ gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass', 'iconfon
     gulp.watch('src/sprite/*.png', ['sprite']); // Наблюдение за папкой с картинками для спрайтов  папке sprite
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
-    gulp.watch('app/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
+    gulp.watch('src/scss/**/*.scss', browserSync.reload);
 });
 
 gulp.task('img', function() {

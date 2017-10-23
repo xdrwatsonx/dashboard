@@ -10,27 +10,27 @@ var gulp         = require('gulp'), // Подключаем Gulp
     autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
     spritesmith = require('gulp.spritesmith'), // Подключение библиотеки для создания спрайтов
     sass = require('gulp-sass'),
-    merge = require('merge-stream'),
-    iconfont = require('gulp-iconfont'),
-    iconfontCss = require('gulp-iconfont-css');
+    merge = require('merge-stream');
+    // iconfont = require('gulp-iconfont'),
+    // iconfontCss = require('gulp-iconfont-css');
 
 
-gulp.task('iconfont', function(){
-    gulp.src(['src/icons/*.svg'])
-        .pipe(iconfontCss({
-            fontName: 'app-ic',
-            path: 'src/templates/_icons.scss',
-            targetPath: '../../src/scss/_app-icons.scss',
-            fontPath: '../fonts/'
-        }))
-        .pipe(iconfont({
-            fontName: 'app-ic'
-        }))
-        .pipe(gulp.dest('app/fonts/'));
-
-    gulp.src('app/fonts/src/*.scss')
-        .pipe(gulp.dest('src/scss/'));
-});
+// gulp.task('iconfont', function(){
+//     gulp.src(['src/icons/*.svg'])
+//         .pipe(iconfontCss({
+//             fontName: 'app-ic',
+//             path: 'src/templates/_icons.scss',
+//             targetPath: '../../src/scss/_app-icons.scss',
+//             fontPath: '../fonts/'
+//         }))
+//         .pipe(iconfont({
+//             fontName: 'app-ic'
+//         }))
+//         .pipe(gulp.dest('app/fonts/'));
+//
+//     gulp.src('app/fonts/src/*.scss')
+//         .pipe(gulp.dest('src/scss/'));
+// });
 
 gulp.task('css', function(){ // Создаем таск Sass
     return gulp.src('src/css/**/*.css') // Берем источник
@@ -41,7 +41,7 @@ gulp.task('css', function(){ // Создаем таск Sass
 
 gulp.task('sass', function () {
     gulp.src('src/scss/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/css'))
 }) ;
@@ -85,10 +85,10 @@ gulp.task('css-libs', ['css'], function() {
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass', 'iconfont'], function() {
+gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], function() {
     // gulp.watch('src/css/**/*.css', ['css']); // Наблюдение за css файлами в папке css
     gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/icons/*.svg', ['iconfont']);
+    // gulp.watch('src/icons/*.svg', ['iconfont']);
     gulp.watch('src/sprite/*.png', ['sprite']); // Наблюдение за папкой с картинками для спрайтов  папке sprite
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js

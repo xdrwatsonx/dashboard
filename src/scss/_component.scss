@@ -19,11 +19,20 @@
   background-color: $headerBg;
 
   .user-control{
-    padding: 18px;
+    //padding: $headerPadding;
     border-left: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGrey;
+
+    a{
+      display: block;
+      padding: $headerPadding;
+    }
+
+    &:hover{
+      background: $xsLightGrey;
+    }
 
     span{
       margin: 0 20px 0 15px;
@@ -35,9 +44,18 @@
   }
   .notification{
     position: relative;
-    padding: 18px;
+    //padding: $headerPadding;
     border-left: 1px solid $lightGrey;
     color: $darkGrey;
+
+    a{
+      display: block;
+      padding: $headerPadding;
+    }
+
+    &:hover{
+      background: $xsLightGrey;
+    }
 
     .icon-notification{
       font-size: 20px;
@@ -49,18 +67,43 @@
     }
   }
   .user-account{
-    padding: 18px;
+    //padding: $headerPadding;
     border-left: 1px solid $lightGrey;
     color: $darkGrey;
 
     .icon-profile{
       font-size: 20px;
     }
+
+    a{
+      display: block;
+      padding: $headerPadding;
+    }
+
+    &:hover{
+      background: $xsLightGrey;
+    }
+
+    a span{
+      margin-left: 18px;
+      color: $blue;
+      font-size: 13px;
+      font-weight: $fontLight;
+    }
   }
   .exit-account{
-    padding: 18px;
+    //padding: $headerPadding;
     border-left: 1px solid $lightGrey;
     color: $darkGrey;
+
+    a{
+      display: block;
+      padding: $headerPadding;
+    }
+
+    &:hover{
+      background: $xsLightGrey;
+    }
 
     .icon-quit{
       font-size: 20px;

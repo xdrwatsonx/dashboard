@@ -233,11 +233,19 @@ button {
 }
 
 #header .user-control {
-  padding: 18px;
   border-left: 1px solid #e3e3e3;
   font-weight: 400;
   font-size: 20px;
   color: #979797;
+}
+
+#header .user-control a {
+  display: block;
+  padding: 20px;
+}
+
+#header .user-control:hover {
+  background: #f5f5f5;
 }
 
 #header .user-control span {
@@ -250,9 +258,17 @@ button {
 
 #header .notification {
   position: relative;
-  padding: 18px;
   border-left: 1px solid #e3e3e3;
   color: #979797;
+}
+
+#header .notification a {
+  display: block;
+  padding: 20px;
+}
+
+#header .notification:hover {
+  background: #f5f5f5;
 }
 
 #header .notification .icon-notification {
@@ -266,7 +282,6 @@ button {
 }
 
 #header .user-account {
-  padding: 18px;
   border-left: 1px solid #e3e3e3;
   color: #979797;
 }
@@ -275,10 +290,34 @@ button {
   font-size: 20px;
 }
 
+#header .user-account a {
+  display: block;
+  padding: 20px;
+}
+
+#header .user-account:hover {
+  background: #f5f5f5;
+}
+
+#header .user-account a span {
+  margin-left: 18px;
+  color: #56819f;
+  font-size: 13px;
+  font-weight: 300;
+}
+
 #header .exit-account {
-  padding: 18px;
   border-left: 1px solid #e3e3e3;
   color: #979797;
+}
+
+#header .exit-account a {
+  display: block;
+  padding: 20px;
+}
+
+#header .exit-account:hover {
+  background: #f5f5f5;
 }
 
 #header .exit-account .icon-quit {

@@ -90,6 +90,7 @@ gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], functio
     gulp.watch('src/scss/**/*.scss', ['sass']);
     // gulp.watch('src/icons/*.svg', ['iconfont']);
     gulp.watch('src/sprite/*.png', ['sprite']); // Наблюдение за папкой с картинками для спрайтов  папке sprite
+    gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
     gulp.watch('src/scss/**/*.scss', browserSync.reload);

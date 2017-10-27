@@ -216,6 +216,30 @@ button {
   top: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-orange {
+  color: #f58220;
+}
+
+.text-grey {
+  color: #bababa;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .page-title, .section-title {
   color: #a6a6a6;
   font-size: 16px;
@@ -226,6 +250,101 @@ button {
   text-transform: uppercase;
 }
 
+.container {
+  margin: 0 auto;
+}
+
+.container.sm {
+  max-width: 684px;
+}
+
+.table {
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+.table tbody tr {
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f3f3;
+}
+
+.table tbody tr:hover .hide-icons {
+  opacity: 1;
+}
+
+.table tbody tr:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.table td {
+  padding: 18px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.table td .hide-icons {
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  font-weight: 300;
+  font-size: 18px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.btn.btn-default {
+  background-color: #979797;
+  color: #fff;
+}
+
+.btn.btn-default:hover {
+  background-color: #bababa;
+}
+
+.btn.btn-action {
+  background-color: #f58220;
+  color: #fff;
+}
+
+.btn.btn-action:hover {
+  background-color: #ffa200;
+}
+
+.btn.btn-disable {
+  background-color: #e3e3e3;
+  color: #fff;
+}
+
+.form-control {
+  padding: 20px;
+  height: 123px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  border-color: #e3e3e3;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #bababa;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #bfbebe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #header {
   width: 100%;
   border-bottom: 1px solid #e3e3e3;
@@ -233,15 +352,24 @@ button {
 }
 
 #header .user-control {
+  padding: 20px;
   border-left: 1px solid #e3e3e3;
   font-weight: 400;
   font-size: 20px;
   color: #979797;
+  position: relative;
 }
 
-#header .user-control a {
-  display: block;
-  padding: 20px;
+#header .user-control.open {
+  background-color: #f5f5f5;
+}
+
+#header .user-control.open .icon-arrow-down {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  line-height: 0;
 }
 
 #header .user-control:hover {
@@ -252,7 +380,7 @@ button {
   margin: 0 20px 0 15px;
 }
 
-#header .user-control .icon-arrow-down-small {
+#header .user-control .icon-arrow-down {
   font-size: 12px;
 }
 
@@ -276,6 +404,11 @@ button {
 }
 
 #header .notification .indicator {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #f58220;
+  height: 8px;
+  width: 8px;
   position: absolute;
   top: 26%;
   left: 51%;
@@ -288,6 +421,7 @@ button {
 
 #header .user-account .icon-profile {
   font-size: 20px;
+  vertical-align: middle;
 }
 
 #header .user-account a {
@@ -299,11 +433,13 @@ button {
   background: #f5f5f5;
 }
 
-#header .user-account a span {
+#header .user-account .user-name {
   margin-left: 18px;
   color: #56819f;
   font-size: 13px;
   font-weight: 300;
+  height: auto;
+  line-height: 20px;
 }
 
 #header .exit-account {
@@ -396,6 +532,11 @@ button {
 }
 
 #aside .your-manager .manager-details .ignition {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #04ae00;
+  height: 11px;
+  width: 11px;
   position: absolute;
   top: 0%;
   left: 22%;
@@ -424,6 +565,97 @@ button {
 .card .card-header {
   border-bottom: 1px solid #e3e3e3;
   padding: 18px;
+}
+
+.card .card-date {
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.datepicker-form .date-input-wrap {
+  padding: 5px 0;
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #333;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.datepicker-form .date-input-wrap input {
+  padding: 11px 16px;
+  vertical-align: middle;
+}
+
+.datepicker-form .date-input-wrap input#to {
+  border-left: 1px solid #e3e3e3;
+}
+
+.datepicker-form .date-input-wrap label {
+  padding: 0 14px 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.datepicker-form .btn {
+  vertical-align: middle;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  padding: 10px 18px 24px;
+  background-color: #f5f5f5;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.links .btn {
+  margin: 20px auto;
+}
+
+.links .table td a {
+  color: #56819f;
+}
+
+.links .table td:last-child {
+  text-align: right;
+}
+
+.links .table i {
+  padding-right: 25px;
+}
+
+.links .table:last-child {
+  padding-right: 8px;
+}
+
+.payout .table tbody td {
+  padding-left: 35px;
+}
+
+.payout .table .filter {
+  display: inline-block;
+  padding: 10px;
+  margin: 40px 0 20px 25px;
+  float: left;
+}
+
+.payout .table .filter:hover {
+  background-color: #e3e3e3;
+  color: #333;
+}
+
+.payout .table .filter:hover i {
+  display: inline;
+}
+
+.payout .table .filter i {
+  padding-left: 10px;
+  font-size: 8px;
+  display: none;
 }
 
 #main {

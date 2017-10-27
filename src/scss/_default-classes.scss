@@ -19,3 +19,29 @@
   z-index: 99;
   top: 0;
 }
+
+//text align
+.text-center{
+  text-align: center;
+}
+
+// text-color
+.text-orange{
+  color: $orange;
+}
+.text-grey{
+  color: $grey;
+}
+
+// text weight
+.text-light{
+  font-weight: $fontLight;
+}
+.text-bold{
+  font-weight: $fontBold;
+}
+
+// width
+.full-width{
+  width: 100%;
+}

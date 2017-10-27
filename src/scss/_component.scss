@@ -12,6 +12,95 @@
   @extend %title;
 }
 
+// container
+.container{
+  margin: 0 auto;
+
+  &.sm{
+    max-width: 684px;
+  }
+}
+
+// table
+.table{
+  font-size: $tableFontSize;
+  border-collapse: collapse;
+
+  tbody{
+    tr{
+      transition: all .2s linear;
+
+      &:hover{
+        background-color: $tableTrHover;
+        .hide-icons{
+          opacity: 1;
+        }
+      }
+      &:last-child{
+        border-bottom: 1px solid $lightGrey;
+      }
+    }
+  }
+
+  td{
+    padding: 18px;
+    border-top: 1px solid $lightGrey;
+
+
+    .hide-icons{
+      opacity: 0;
+      transition: all .2s linear;
+    }
+  }
+}
+
+// buttons
+.btn{
+  padding: 10px 20px;
+  border: none;
+  font-weight: $fontLight;
+  font-size: 18px;
+  border-radius: 2px;
+}
+.btn.btn-default {
+  background-color: $darkGrey;
+  color: #fff;
+
+  &:hover{
+    background-color: $grey;
+  }
+}
+.btn.btn-action {
+  background-color: $orange;
+  color: #fff;
+
+  &:hover{
+    background-color: $orangeLight;
+  }
+}
+.btn.btn-disable {
+  background-color: $lightGrey;
+  color: #fff;
+}
+
+// inputs
+.form-control{
+  padding: 20px;
+  height: 123px;
+  border-radius: 2px;
+  border-color: $lightGrey;
+  font-family: $fontFamily;
+  font-size: 12px;
+  font-weight: $fontLight;
+  color: $grey;
+  box-shadow: none;
+
+  &:focus{
+    border-color: #bfbebe;
+    box-shadow: none;
+  }
+}
+
 // header
 #header{
   width: 100%;
@@ -19,15 +108,21 @@
   background-color: $headerBg;
 
   .user-control{
-    //padding: $headerPadding;
+    padding: $headerPadding;
     border-left: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGrey;
+    position: relative;
 
-    a{
-      display: block;
-      padding: $headerPadding;
+    &.open{
+      background-color: $xsLightGrey;
+
+      .icon-arrow-down{
+        display: inline-block;
+        transform: rotate(180deg);
+        line-height: 0;
+      }
     }
 
     &:hover{
@@ -38,7 +133,7 @@
       margin: 0 20px 0 15px;
     }
 
-    .icon-arrow-down-small{
+    .icon-arrow-down{
       font-size: 12px;
     }
   }
@@ -61,6 +156,10 @@
       font-size: 20px;
     }
     .indicator{
+      border-radius: 50%;
+      background-color: $orange;
+      height: 8px;
+      width: 8px;
       position: absolute;
       top: 26%;
       left: 51%;
@@ -73,6 +172,7 @@
 
     .icon-profile{
       font-size: 20px;
+      vertical-align: middle;
     }
 
     a{
@@ -84,11 +184,13 @@
       background: $xsLightGrey;
     }
 
-    a span{
+    .user-name{
       margin-left: 18px;
       color: $blue;
       font-size: 13px;
       font-weight: $fontLight;
+      height: auto;
+      line-height: 20px;
     }
   }
   .exit-account{
@@ -190,6 +292,10 @@
         border-radius: 50%;
       }
       .ignition{
+        border-radius: 50%;
+        background-color: #04ae00;
+        height: 11px;
+        width: 11px;
         position: absolute;
         top: 0%;
         left: 22%;
@@ -220,4 +326,117 @@
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
   }
+  .card-date{
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
 }
+
+.datepicker-form{
+
+  .date-input-wrap{
+    padding: 5px 0;
+    display: inline-block;
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    color: $black;
+    vertical-align: middle;
+    margin-right: 12px;
+
+    input{
+      padding: 11px 16px;
+      vertical-align: middle;
+
+      &#to{
+        border-left: 1px solid $lightGrey;
+      }
+    }
+    label{
+      padding: 0 14px 0 10px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  .btn{
+    vertical-align: middle;
+  }
+}
+
+// dropdown
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  padding: 10px 18px 24px;
+  background-color: $xsLightGrey;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+}
+
+// links
+.links{
+
+  .btn{
+    margin: 20px auto;
+  }
+}
+
+.links{
+
+  .table{
+    td{
+      a{
+        color: $blue;
+      }
+    }
+    td:last-child{
+        text-align: right;
+    }
+
+    i{
+      padding-right: 25px;
+    }
+    &:last-child{
+      padding-right: 8px;
+    }
+  }
+}
+
+// payout
+.payout{
+
+  .table{
+
+    tbody{
+
+      td{
+        padding-left: 35px;
+      }
+    }
+
+    .filter{
+      display: inline-block;
+      padding: 10px;
+      margin: 40px 0 20px 25px;
+      float: left;
+
+      &:hover{
+        background-color: $lightGrey;
+        color: $black;
+
+        i{
+          display: inline;
+        }
+      }
+
+      i{
+        padding-left: 10px;
+        font-size: 8px;
+        display: none;
+      }
+    }
+  }
+}
+

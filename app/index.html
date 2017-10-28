@@ -18,34 +18,37 @@
 <!-- HEADER START -->
 <header id="header" class="fixed-to-top">
     <div class="flex-container justify-end">
-        <div class="user-control dropdown-wrap">
+        <div class="header-section user-control dropdown-wrap">
             <i class="icon-wallet"></i>
             <span class="account">$1,500.00</span>
             <i class="icon-arrow-down"></i>
             <div class="dropdown-menu">
                 <ul>
-                    <li><a href="" class="dropdown-link">link1</a></li>
-                    <li><a href="" class="dropdown-link">link2</a></li>
-                    <li><a href="" class="dropdown-link">link3</a></li>
+                    <li><a href="" class="dropdown-link">CPA</a>
+                        <span>$1000</span>
+                    </li>
+                    <li><a href="" class="dropdown-link">CPL</a>
+                        <span>$1100</span>
+                    </li>
+                    <li><a href="" class="dropdown-link">Turnover</a>
+                        <span>$1030</span>
+                    </li>
+                    <li><a href="" class="dropdown-link">Net deposit</a>
+                        <span>$1000</span>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="notification">
-            <a href="">
+        <div class="header-section notification">
             <i class="icon-notification"></i>
             <span class="indicator"></span>
-            </a>
         </div>
-        <div class="user-account">
-            <a href="">
+        <div class="header-section user-account">
             <i class="icon-profile"></i>
-                <span class="user-name">Leonardo Dicaprio</span>
-            </a>
+            <span class="user-name">Leonardo Dicaprio</span>
         </div>
-        <div class="exit-account">
-            <a href="">
+        <div class="header-section exit-account">
             <i class="icon-quit"></i>
-            </a>
         </div>
     </div>
 </header>
@@ -151,13 +154,24 @@
     </div>
 </main>
 
+<!-- loader start -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+<!-- loader end -->
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
 
 <!-- Init plugins -->
 <script src="js/init.js"></script>
-
 <script src="js/plugins.min.js"></script>
 </body>
 </html>

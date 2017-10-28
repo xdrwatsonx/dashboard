@@ -1,3 +1,63 @@
+// loader
+#loading{
+  background-color: #bd4932;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  margin-top: 0px;
+  top: 0px;
+  transition: opacity .3s, z-index .1s linear .3s;
+
+  &.hide{
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+#loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+#object{
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+      transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+      -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+    } 100% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+      }
+}
+
 // title
 %title{
   color: $titleColor;
@@ -86,7 +146,6 @@
 // inputs
 .form-control{
   padding: 20px;
-  height: 123px;
   border-radius: 2px;
   border-color: $lightGrey;
   font-family: $fontFamily;
@@ -108,11 +167,6 @@
   background-color: $headerBg;
 
   .user-control{
-    padding: $headerPadding;
-    border-left: 1px solid $lightGrey;
-    font-weight: $fontRegular;
-    font-size: 20px;
-    color: $darkGrey;
     position: relative;
 
     &.open{
@@ -139,22 +193,11 @@
   }
   .notification{
     position: relative;
-    //padding: $headerPadding;
-    border-left: 1px solid $lightGrey;
-    color: $darkGrey;
-
-    a{
-      display: block;
-      padding: $headerPadding;
-    }
 
     &:hover{
       background: $xsLightGrey;
     }
-
-    .icon-notification{
-      font-size: 20px;
-    }
+  }
     .indicator{
       border-radius: 50%;
       background-color: $orange;
@@ -164,20 +207,10 @@
       top: 26%;
       left: 51%;
     }
-  }
   .user-account{
-    //padding: $headerPadding;
-    border-left: 1px solid $lightGrey;
-    color: $darkGrey;
 
     .icon-profile{
-      font-size: 20px;
       vertical-align: middle;
-    }
-
-    a{
-      display: block;
-      padding: $headerPadding;
     }
 
     &:hover{
@@ -194,21 +227,9 @@
     }
   }
   .exit-account{
-    //padding: $headerPadding;
-    border-left: 1px solid $lightGrey;
-    color: $darkGrey;
-
-    a{
-      display: block;
-      padding: $headerPadding;
-    }
 
     &:hover{
       background: $xsLightGrey;
-    }
-
-    .icon-quit{
-      font-size: 20px;
     }
   }
 }
@@ -330,6 +351,20 @@
     padding: 30px 0;
     border-bottom: 1px solid $lightGrey;
   }
+  .card-form{
+    .select-group{
+      padding: 18px;
+    }
+    .input-group{
+      label{
+        display: block;
+      }
+      input{
+        width: 100%;
+      }
+
+    }
+  }
 }
 
 .datepicker-form{
@@ -364,7 +399,7 @@
 }
 
 // dropdown
-.dropdown-menu{
+#header .dropdown-menu{
   display: none;
   position: absolute;
   padding: 10px 18px 24px;
@@ -373,6 +408,17 @@
   left: 0;
   right: 0;
 
+  li{
+    padding-top: 15px;
+    font-size: $dropboxFontSize;
+    display: flex;
+    justify-content: space-between;
+
+    span{
+      color: $black;
+      margin: 0;
+    }
+  }
 }
 
 // links
@@ -440,3 +486,12 @@
   }
 }
 
+.modal{
+  background-color: $modalBg;
+  display: none;
+
+  &#links{
+    width: 70%;
+    min-height: 100px;
+  }
+}

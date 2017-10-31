@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Details</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- HEADER START -->
+<header id="header" class="fixed-to-top">
+    <div class="flex-container justify-end">
+        <div class="header-section user-control dropdown-wrap">
+            <i class="icon-wallet"></i>
+            <span class="account">$1,500.00</span>
+            <i class="icon-arrow-down"></i>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="" class="dropdown-link">CPA
+                        <span>$1000</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">CPL
+                        <span>$1100</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">Turnover
+                        <span>$1030</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">Net deposit
+                        <span>$1000</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-section notification">
+            <i class="icon-notification"></i>
+            <span class="indicator"></span>
+        </div>
+        <div class="header-section user-account">
+            <i class="icon-profile"></i>
+            <span class="user-name">Leonardo Dicaprio</span>
+        </div>
+        <div class="header-section exit-account">
+            <i class="icon-quit"></i>
+        </div>
+    </div>
+</header>
+<!-- HEADER END -->
+
+<!-- ASIDE START -->
+<aside id="aside" class="fixed-to-top">
+    <div class="menu-control flex-container justify-sb align-center">
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- menu-control -->
+    <div class="aside-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="icon-general"></i>
+                    <span>General</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="">
+                    <i class="icon-details"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <i class="icon-links"></i>
+                    <span>Links</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-banners"></i>
+                    <span>Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-personaldata"></i>
+                    <span>Personal data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <i class="icon-payout"></i>
+                    <span>Payout</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-postback"></i>
+                    <span>Postback</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="your-manager">
+        <h6>YOUR MANAGER</h6>
+        <div class="manager-details flex-container align-center">
+            <div class="manager-avatar">
+                <img class="avatar" src="img/avatar.jpg" alt="">
+                <span class="ignition"></span>
+            </div>
+            <a href="">Mikhael E.</a>
+        </div>
+    </div>
+</aside>
+<!-- ASIDE END -->
+<main id="main">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <span class="page-title">Detail Statistic</span>
+            </div>
+            <!-- /card header-->
+            <div class="card-date text-center">
+                <form class="datepicker-form">
+                    <div class="date-input-wrap">
+                        <input type="text" name="from" id="from">
+                        <input type="text" name="to" id="to">
+                        <label for="from">
+                            <i class="icon-calendar"></i>
+                        </label>
+                    </div>
+                    <button class="btn btn-action">
+                        <i class="icon-refresh"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- /card -date -->
+            <div class="details card-body">
+                <table class="table full-width">
+                    <thead>
+                    <tr>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Tracker name<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Initiated date<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Visits<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Unique<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Signups<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">FTD<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Depositors<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Deposits ($)<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Payout ($)<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Turnover<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                        <th class="text-bold text-grey">
+                            <div class="filter">Deal<i class="icon-arrow-up-small"></i></div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-light">aff/sam_test</td>
+                        <td class="text-light">17/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">34,425.00</td>
+                        <td class="text-light">234.00</td>
+                        <td class="text-light">421,342.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/leo_test</td>
+                        <td class="text-light">15/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">29,436.00</td>
+                        <td class="text-light">941.00</td>
+                        <td class="text-light">784,435.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/sam_test</td>
+                        <td class="text-light">17/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">34,425.00</td>
+                        <td class="text-light">234.00</td>
+                        <td class="text-light">421,342.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/leo_test</td>
+                        <td class="text-light">15/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">29,436.00</td>
+                        <td class="text-light">941.00</td>
+                        <td class="text-light">784,435.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/sam_test</td>
+                        <td class="text-light">17/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">34,425.00</td>
+                        <td class="text-light">234.00</td>
+                        <td class="text-light">421,342.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/leo_test</td>
+                        <td class="text-light">15/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">29,436.00</td>
+                        <td class="text-light">941.00</td>
+                        <td class="text-light">784,435.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/sam_test</td>
+                        <td class="text-light">17/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">34,425.00</td>
+                        <td class="text-light">234.00</td>
+                        <td class="text-light">421,342.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-light">aff/leo_test</td>
+                        <td class="text-light">15/08/02 (12:58)</td>
+                        <td class="text-light">232</td>
+                        <td class="text-light">114</td>
+                        <td class="text-light">12</td>
+                        <td class="text-light">6</td>
+                        <td class="text-light">3</td>
+                        <td class="text-light">29,436.00</td>
+                        <td class="text-light">941.00</td>
+                        <td class="text-light">784,435.00</td>
+                        <td class="text-light">cpl (200)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination text-center">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true"><i class="icon-arrow-left"></i></span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true"><i class="icon-arrow-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /card body-->
+        </div>
+        <!-- /card -->
+    </div>
+</main>
+
+<!-- loader start -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+<!-- loader end -->
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+
+<!-- Init plugins -->
+<script src="js/init.js"></script>
+
+<script src="js/plugins.min.js"></script>
+</body>
+</html>

@@ -412,10 +412,10 @@ button {
 }
 
 .form-control {
-  padding: 20px;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
   -webkit-border-radius: 2px;
           border-radius: 2px;
-  border-color: #e3e3e3;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -424,10 +424,13 @@ button {
           box-shadow: none;
 }
 
+.form-control:hover {
+  color: #333;
+  border: 1px solid #bababa;
+}
+
 .form-control:focus {
-  border-color: #bfbebe;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  color: #333;
 }
 
 #header {
@@ -647,6 +650,10 @@ button {
   margin-right: 12px;
 }
 
+.datepicker-form .date-input-wrap:hover {
+  border: 1px solid #bababa;
+}
+
 .datepicker-form .date-input-wrap input {
   padding: 11px 16px;
   vertical-align: middle;
@@ -660,6 +667,10 @@ button {
   padding: 0 14px 0 10px;
   vertical-align: middle;
   display: inline-block;
+}
+
+.datepicker-form .date-input-wrap label:hover {
+  cursor: pointer;
 }
 
 .datepicker-form .btn {
@@ -771,6 +782,10 @@ button {
   font-size: 16px;
   font-weight: 300;
   color: #56819f;
+}
+
+.pagination li:hover {
+  color: #f58220;
 }
 
 .pagination li.active {
@@ -1614,5 +1629,19 @@ input[type='submit'].styler[disabled] {
 }
 
 ._mobileSidebar #aside .your-manager {
+  padding: 0;
+}
+
+._mobileSidebar #aside .your-manager .manager-avatar {
+  margin: auto;
+  width: 50%;
+}
+
+._mobileSidebar #aside .your-manager .manager-avatar .ignition {
+  height: 9px;
+  width: 9px;
+}
+
+._mobileSidebar #aside .your-manager h6, ._mobileSidebar #aside .your-manager a {
   display: none;
 }

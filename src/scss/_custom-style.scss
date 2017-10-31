@@ -64,7 +64,21 @@
       }
     }
     .your-manager{
+      padding: 0;
+
+      .manager-avatar{
+        margin: auto;
+        width: 50%;
+
+        .ignition{
+          height: 9px;
+          width: 9px;
+        }
+      }
+
+      h6, a{
       display: none;
+      }
     }
   }
 }

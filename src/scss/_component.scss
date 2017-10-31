@@ -145,18 +145,22 @@
 
 // inputs
 .form-control{
-  padding: 20px;
+  padding: 10px;
+  border: 1px solid $lightGrey;
   border-radius: 2px;
-  border-color: $lightGrey;
   font-family: $fontFamily;
   font-size: 12px;
   font-weight: $fontLight;
   color: $grey;
   box-shadow: none;
 
+  &:hover{
+    color: $black;
+    border: 1px solid $grey;
+  }
+
   &:focus{
-    border-color: #bfbebe;
-    box-shadow: none;
+    color: $black;
   }
 }
 
@@ -387,6 +391,10 @@
     vertical-align: middle;
     margin-right: 12px;
 
+    &:hover{
+      border: 1px solid $grey;
+    }
+
     input{
       padding: 11px 16px;
       vertical-align: middle;
@@ -399,6 +407,10 @@
       padding: 0 14px 0 10px;
       vertical-align: middle;
       display: inline-block;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 
@@ -517,6 +529,10 @@
     font-size: $tableLinksFontSize;
     font-weight: $paginationFontWeight;
     color: $paginationFontColor;
+
+    &:hover{
+      color: $orange;
+    }
 
     &.active{
       background-color: $paginationActiveBG;

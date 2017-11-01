@@ -1,3 +1,9 @@
+// body
+[class*='icon-']{
+  line-height: 0;
+  cursor: pointer;
+}
+
 // header
 .header-section {
   font-size: 20px;
@@ -79,6 +85,20 @@
       h6, a{
       display: none;
       }
+    }
+  }
+}
+
+.generate-links{
+  input[type="text"]{
+    flex-grow: 1;
+  }
+
+  .btn{
+    margin-left: 15px;
+    i{
+      vertical-align: sub;
+      margin-right: 15px;
     }
   }
 }

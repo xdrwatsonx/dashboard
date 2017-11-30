@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Template</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- HEADER START -->
+<header id="header" class="fixed-to-top">
+    <div class="flex-container justify-end">
+        <div class="header-section user-control dropdown-wrap">
+            <i class="icon-wallet"></i>
+            <span class="account">$1,500.00</span>
+            <i class="icon-arrow-down"></i>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="" class="dropdown-link">CPA
+                        <span>$1000</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">CPL
+                        <span>$1100</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">Turnover
+                        <span>$1030</span></a>
+                    </li>
+                    <li><a href="" class="dropdown-link">Net deposit
+                        <span>$1000</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-section notification">
+            <i class="icon-notification"></i>
+            <span class="indicator"></span>
+        </div>
+        <div class="header-section user-account">
+            <i class="icon-profile"></i>
+            <span class="user-name">Leonardo Dicaprio</span>
+        </div>
+        <div class="header-section exit-account">
+            <i class="icon-quit"></i>
+        </div>
+    </div>
+</header>
+<!-- HEADER END -->
+
+<!-- ASIDE START -->
+<aside id="aside" class="fixed-to-top">
+    <div class="menu-control flex-container justify-sb align-center">
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- menu-control -->
+    <div class="aside-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="icon-general"></i>
+                    <span>General</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <i class="icon-details"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <i class="icon-links"></i>
+                    <span>Links</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="banners.html">
+                    <i class="icon-banners"></i>
+                    <span>Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-personaldata"></i>
+                    <span>Personal data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <i class="icon-payout"></i>
+                    <span>Payout</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-postback"></i>
+                    <span>Postback</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="your-manager">
+        <h6>YOUR MANAGER</h6>
+        <div class="manager-details flex-container align-center">
+            <div class="manager-avatar">
+                <img class="avatar" src="img/avatar.jpg" alt="">
+                <span class="ignition"></span>
+            </div>
+            <a href="">Mikhael E.</a>
+        </div>
+    </div>
+</aside>
+<!-- ASIDE END -->
+<main id="main">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <span class="page-title">Banners</span>
+            </div>
+            <!-- /card header-->
+
+            <div class="card-body">
+                <div class="links">
+                    <div class="btn-row text-center">
+                        <button class="btn btn-action" data-modal data-target="#banners" >+ add new</button>
+                    </div>
+                    <div class="container sm">
+                        <table class="table full-width">
+                            <tr>
+                                <td class="text-grey text-bold">Banner main</td>
+                                <td>
+                                    <a href="">http://www.website.com/bannermain.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Sign up banner</td>
+                                <td>
+                                    <a href="">http://www.website.com/signup.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Banner left side</td>
+                                <td>
+                                    <a href="">http://www.website.com/leftside.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Vertical banner</td>
+                                <td>
+                                    <a href="">http://www.website.com/vert.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Front banner</td>
+                                <td>
+                                    <a href="">hhttp://www.website.com/front.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Horizontal banner</td>
+                                <td>
+                                    <a href="">http://www.website.com/horizontal.gif</a>
+                                </td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-row text-center">
+                        <button class="btn btn-action" data-modal data-target="#banners" >+ add new</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /card body-->
+        </div>
+        <!-- /card -->
+    </div>
+</main>
+
+<!-- modal start -->
+<div class="modal" id="banners">
+    <div class="card">
+        <div class="card-header flex-container justify-sb">
+            <span class="page-title">Add banners</span>
+            <span class="close"><i class="icon-close"></i></span>
+        </div>
+        <div class="card-body">
+            <div class="card-form">
+                <form>
+                    <div class="select-group flex-container align-center">
+                        <div class="input-group">
+                            <lable class="subtitle" for="">Scheme name</lable>
+                            <input placeholder="Name" type="text" class="form-control">
+                        </div>
+                        <div class="input-group align-self-end">
+                            <lable class="subtitle" for="">Compain</lable>
+                            <select name="" id="">
+                                <option value="">one</option>
+                                <option value="">two</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="subtitle" for="">Language</label>
+                            <select name="" id="">
+                                <option value="">USA</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="subtitle" for="">Weight-Height</label>
+                            <select name="" id="">
+                                <option value="">USA</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="subtitle" for="">Design</label>
+                            <select name="" id="">
+                                <option value="">USA</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="subtitle" for="">File type</label>
+                            <select name="" id="">
+                                <option value="">USA</option>
+                                <option value="">RU</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /select-group-->
+                    <div class="checkbox-wrap flex-container justify-sb">
+                        <div class="select-banners">
+                            <h3 class="subtitle">Select banners</h3>
+                            <div class="checkboxes flex-container scrollbar-inner banners-height">
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link1" id="link1">
+                                    <label for="link1" class="flex-container align-center">Banner main</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link2" id="link2">
+                                    <label for="link2" class="flex-container align-center">Sign up banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link3" id="link3">
+                                    <label for="link3" class="flex-container align-center">Left banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link4" id="link4">
+                                    <label for="link4" class="flex-container align-center">Right banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link5" id="link5">
+                                    <label for="link5" class="flex-container align-center">Bottom banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link6" id="link6">
+                                    <label for="link6" class="flex-container align-center">Long banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link7" id="link7">
+                                    <label for="link7" class="flex-container align-center">Personal cabinet banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link8" id="link8">
+                                    <label for="link8" class="flex-container align-center">Popup banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                                <div class="checkbox-group flex-container align-center banners-column">
+                                    <input type="checkbox" name="link9" id="link9">
+                                    <label for="link9" class="flex-container align-center">Something banner</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!-- /checkbox-group -->
+                            </div>
+                        </div>
+                        <div class="select-web">
+                            <h3 class="subtitle">Select websites</h3>
+
+                        </div>
+                    </div>
+                    <!-- /checkboxwrap -->
+                    <div class="generate-links flex-container align-center">
+                        <input type="text" name="" id="" class="form-control" placeholder="Generated link">
+                        <button class="btn btn-disable"><i class="icon-links"></i>Copy link</button>
+                        <button class="btn btn-action">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- modals end -->
+<!-- loader start -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+<!-- loader end -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+
+
+<!-- Init plugins -->
+<script src="js/init.js"></script>
+
+<script src="js/plugins.min.js"></script>
+</body>
+</html>

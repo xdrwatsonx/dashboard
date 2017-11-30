@@ -89,7 +89,7 @@ input[type="checkbox"]{
 
 // checkbox wrapper
 .checkbox-wrap{
-  padding: 30px 0;
+  padding: 20px 0;
 
   .checkboxes{
     padding-top: 30px;
@@ -121,6 +121,15 @@ input[type="checkbox"]{
       }
     }
   }
+  .banners-height{
+    min-height: 320px;
+    flex-direction: column;
+
+    .banners-column{
+      flex-grow: 0;
+      flex-basis: 0;
+    }
+  }
 }
 
 // title
@@ -135,6 +144,11 @@ input[type="checkbox"]{
 }
 .section-title{
   @extend %title;
+}
+.subtitle{
+  color: $grey;
+  font-size: 16px;
+  font-weight: $fontBold;
 }
 
 // container
@@ -212,7 +226,7 @@ input[type="checkbox"]{
 .form-control{
   padding: 12px;
   border: 1px solid $lightGrey;
-  border-radius: 2px;
+  border-radius: 4px;
   font-family: $fontFamily;
   font-size: 12px;
   font-weight: $fontLight;
@@ -228,6 +242,8 @@ input[type="checkbox"]{
     color: $black;
   }
 }
+
+
 
 // header
 #header{
@@ -581,7 +597,7 @@ input[type="checkbox"]{
   background-color: $modalBg;
   display: none;
 
-  &#links{
+  &#links, &#banners{
     width: 70%;
     min-height: 100px;
   }
@@ -628,4 +644,18 @@ input[type="checkbox"]{
       margin-right: 10px;
     }
   }
+}
+
+//banners
+
+.select-banners{
+  min-width: 50%;
+  border-top: 1px solid $lightGrey;
+  border-right: 1px solid $lightGrey;
+  border-bottom: 1px solid $lightGrey;
+}
+.select-web{
+  min-width: 50%;
+  border-top: 1px solid $lightGrey;
+  border-bottom: 1px solid $lightGrey;
 }
